@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+  <h1>Track</h1>
+    <input type="range" min="0" max="100" value="65" class="g1">
+    <span id="sliderValue">65</span>
+    <div class="slide_number">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="slide_number1">
+        <span >0</span>
+        <span>20</span>
+        <span>40</span>
+        <span>60</span>
+        <span>80</span>
+        <span>100</span>
+    </div>
+
+    <h1>Divisor</h1>
+    <input type="range" min="0" max="100" value="65" class="g2">
+    <span id="sliderValue2">65</span>
+    <div class="slide_number2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+
+    
+
+
+
+
+
+    
+    <script>
+      const slider = document.querySelector('.g1');
+      const sliderValue = document.getElementById('sliderValue');
+
+      
+      slider.addEventListener('input', function() {
+        sliderValue.textContent = this.value;
+      });
+      const slider2 = document.querySelector('.g2');
+      const sliderValue2 = document.getElementById('sliderValue2');
+
+      
+      slider2.addEventListener('input', function() {
+        sliderValue2.textContent = this.value;
+      });
+    </script>
+     
+
+    <style>
+    
+
+      
+      input[type="range"] {
+          overflow: hidden;
+        }
+
+      .slide_number > div{
+        background-color: black;
+        width: 2px;
+        height: 6px;
+        margin-right: 44px;
+        margin-left: 3px;
+      }
+      .slide_number{
+        height: 10px;
+        display: flex;
+      }
+      .slide_number1>span{
+        margin-right: 30px;
+      }
+      .g1{
+          -webkit-appearance: none ;
+            width: 250px;
+            height: 7px;
+            background: -webkit-linear-gradient(left, rgba(0, 128, 0, 0.337) 70%, rgba(255, 0, 0, 0.37) 70%);
+            border-radius: 5px;
+
+          }
+          .g1::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              appearance: none;
+              background: green;
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+              box-shadow: -407px 0 0 400px rgb(0, 255, 0);
+            }
+          .g2{
+          -webkit-appearance: none ;
+            width: 250px;
+            height: 7px;
+            background: -webkit-linear-gradient(left, rgb(10, 0, 145) 70%, rgb(10, 0, 145) 70%);
+            border-radius: 5px;
+
+          }
+          .g2::-webkit-slider-thumb{
+            -webkit-appearance: none ;
+            background: rgb(0, 60, 255);
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            box-shadow: -407px 0 0 400px rgb(0, 60, 255);
+          } 
+          .slide_number2{
+            height: 10px;
+            display: flex;
+          }
+          .slide_number2 > div{
+              background-color: rgb(10, 0, 145);
+              width: 5px;
+              height: 10px;
+              margin-right: 40px;
+              margin-left: 3px;
+              margin-top: -12px;
+              z-index: -1;
+              
+      }
+    </style>
+  
+
+</body>
+</html>
